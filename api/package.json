@@ -1,0 +1,28 @@
+{
+  "name": "npm-intel-mcp-api",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@npm-intel/shared": "file:../shared",
+    "@fastify/cors": "^8.4.2",
+    "@elastic/elasticsearch": "^8.15.0",
+    "bullmq": "^5.16.1",
+    "@google/generative-ai": "^0.21.0",
+    "fastify": "^4.28.1",
+    "fastify-type-provider-zod": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

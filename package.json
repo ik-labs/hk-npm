@@ -1,0 +1,47 @@
+{
+  "name": "npm-intel",
+  "version": "1.0.0",
+  "description": "AI-powered npm package intelligence with grounded code generation",
+  "main": "dist/src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/src/index.js",
+    "cleanup": "tsx scripts/cleanup.ts",
+    "setup:inference": "tsx scripts/setup-inference.ts",
+    "setup:index": "tsx scripts/setup-index.ts",
+    "ingest": "tsx scripts/ingest-packages.ts",
+    "test:search": "tsx scripts/test-search.ts",
+    "test:search-simple": "tsx scripts/test-search-simple.ts",
+    "test:semantic": "tsx scripts/test-semantic-search.ts",
+    "test:codegen": "tsx scripts/test-codegen.ts",
+    "test:api": "tsx scripts/test-api.ts",
+    "verify:embeddings": "tsx scripts/verify-embeddings.ts",
+    "mcp:demo": "tsx scripts/mcp-demo.ts"
+  },
+  "keywords": [
+    "npm",
+    "search",
+    "ai",
+    "elastic",
+    "gemini"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.15.0",
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.3",
+    "zod": "^3.23.8",
+    "tar": "^7.4.3",
+    "node-fetch": "^3.3.2",
+    "@octokit/rest": "^21.0.2",
+    "@npm-intel/shared": "file:./shared"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.6",
+    "tsx": "^4.19.2"
+  }
+}
